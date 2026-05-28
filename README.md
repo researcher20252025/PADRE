@@ -24,42 +24,10 @@ Code layout:
 - `padre/experiment.py`: end-to-end experiment orchestration;
 - `padre_experiment.py` and `run_table.py`: backward-compatible CLI wrappers.
 
-
-
 Run one experiment:
-
 ```powershell
 python padre_experiment.py --backbone tcn --data-path ETTh2.csv --horizon 24 --lookback 60
 ```
-
-```powershell
-
-```
-
-
-
-```powershell
-
-```
-
-
-
-```powershell
-
-```
-
-
-
-```powershell
-
-```
-
-
-
-```powershell
-
-```
-
 GPU note: the local environment has `torch 2.12.0+cu130`; `--device auto` uses the RTX 5060  GPU.
 
 
