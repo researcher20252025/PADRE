@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Experiment outputs and checkpoints.
+results*/
+*.pt
+*.pth
+*.ckpt
+
+# Local editor/system files.
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

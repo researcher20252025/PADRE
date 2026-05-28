@@ -1,0 +1,55 @@
+{
+  "tcn_ettm1": {
+    "lookback": 60,
+    "args": [
+      "--tcn-head", "flatten",
+      "--no-time-features",
+      "--hidden", "64",
+      "--levels", "4",
+      "--online-lr", "0.00008",
+      "--online-update-stride", "4",
+      "--lambda-tri", "0.008",
+      "--gate-floor", "0.2",
+      "--prediction-ema-decay", "0.995",
+      "--warmup-val-online"
+    ]
+  },
+  "patchtst_weather": {
+    "lookback": 512,
+    "args": [
+      "--no-time-features",
+      "--no-revin",
+      "--d-model", "64",
+      "--n-heads", "4",
+      "--transformer-layers", "2",
+      "--transformer-ff", "128",
+      "--patch-len", "16",
+      "--patch-stride", "8",
+      "--online-lr", "0.00004",
+      "--online-update-stride", "4",
+      "--online-train-scope", "head",
+      "--lambda-tri", "0.008",
+      "--gate-floor", "0.2",
+      "--prediction-ema-decay", "0.995",
+      "--warmup-val-online"
+    ]
+  },
+  "itransformer_weather": {
+    "lookback": 512,
+    "args": [
+      "--no-revin",
+      "--d-model", "64",
+      "--n-heads", "4",
+      "--transformer-layers", "2",
+      "--transformer-ff", "128",
+      "--online-lr", "0.00008",
+      "--online-update-stride", "4",
+      "--online-train-scope", "head",
+      "--pattern-residual-correction", "1.0",
+      "--pattern-residual-feature-mode", "stats",
+      "--k-clusters", "8",
+      "--prediction-ema-decay", "0.995",
+      "--warmup-val-online"
+    ]
+  }
+}
